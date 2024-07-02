@@ -22,9 +22,11 @@ This repository is designed to facilitate running the Movie Recommender System A
 
 ### Push Docker Image to GHCR
 
-Tag the Docker image and push it to GHCR:
+Clone Repo, Build and Tag the Docker image and Push it to GHCR:
 
 ```bash
+git clone https://github.com/manojbusam/Recommender-Container.git
+cd Recommender-Container/
 docker build -t movie-recommender-app .
 docker tag movie-recommender-app:latest ghcr.io/manojbusam/recommender-container/recommender-system:latest
 docker login ghcr.io -u <username> -p <youraccesstoken>
