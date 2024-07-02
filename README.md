@@ -48,27 +48,27 @@ Access the API at: [http://localhost:5002/recommend?title=The%20Matrix](http://l
 
 ### 2. Python Virtual Environment  (Local)
 
-1. **Clone the repository:**
+2a. **Clone the repository:**
 
    ```bash
    git clone https://github.com/manojbusam/Recommender-Container.git
    cd Recommender-Container
    ```
 
-2. **Setup Virtual Environment:**
+2b. **Setup Virtual Environment:**
 
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    ```
 
-3. **Install Dependencies:**
+2c. **Install Dependencies:**
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-4. **Run the Recommender System locally:**
+2d. **Run the Recommender System locally:**
 
    Convert "movies.csv" into a Python file and serve through the recommendations ML model:
 
@@ -78,7 +78,7 @@ Access the API at: [http://localhost:5002/recommend?title=The%20Matrix](http://l
 
 ## 3. Docker Container (Local)
 
-### Build Docker Image
+### 3a. Build Docker Image
 
 Build the Docker image for the Movie Recommender System API:
 
@@ -86,7 +86,7 @@ Build the Docker image for the Movie Recommender System API:
 docker build -t movie-recommender-app .
 ```
 
-### Run Docker Container
+### 3b. Run Docker Container
 
 Run the Docker container locally:
 
