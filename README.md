@@ -5,9 +5,9 @@ This repository contains code to containerize a Movie Recommender System API usi
 ## Repository Design
 
 This repository is designed to facilitate running the Movie Recommender System API in various environments:
-- **Python Virtual Environment:** Run the system directly in a Python virtual environment for development and testing.
-- **Docker Container (Local):** Containerize the application for local deployment using Docker.
-- **GitHub Container Registry (GHCR):** Push the Docker image to GHCR for centralized deployment and pull it back to run locally.
+1. **Python Virtual Environment:** Run the system directly in a Python virtual environment for development and testing.
+2. **Docker Container (Local):** Containerize the application for local deployment using Docker.
+3. **GitHub Container Registry (GHCR):** Push the Docker image to GHCR for centralized deployment and pull it back to run locally.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ This repository is designed to facilitate running the Movie Recommender System A
 - Docker installed
 - GitHub account and access to GHCR
 
-### Installation
+### 1. Python Virtual Environment
 
 1. **Clone the repository:**
 
@@ -47,7 +47,7 @@ This repository is designed to facilitate running the Movie Recommender System A
    python3 src/recommender.py
    ```
 
-## Docker Containerization
+## 2. Docker Container (Local)
 
 ### Build Docker Image
 
@@ -70,7 +70,7 @@ Access the API at: [http://localhost:5001/recommend?title=The%20Matrix](http://l
 <img width="581" alt="Screenshot 2024-07-01 at 7 46 06 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/d29f0a21-ec31-49de-b97b-3e66efd78e8a">
 
 
-## GitHub Container Registry (GHCR)
+## 3. GitHub Container Registry (GHCR)
 
 ### Push Docker Image to GHCR
 
