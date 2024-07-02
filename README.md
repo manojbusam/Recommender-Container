@@ -22,6 +22,8 @@ This repository is designed to facilitate running the Movie Recommender System A
 
 ### 1a. Push Docker Image to GHCR
 
+![Screenshot 2024-07-02 at 9 09 17 AM](https://github.com/manojbusam/Recommender-Container/assets/44409170/1f046e71-490b-430c-a246-dcae90b5933b)
+
 Clone Repo, Build and Tag the Docker image and Push it to GHCR:
 
 ```bash
