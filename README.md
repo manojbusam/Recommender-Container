@@ -1,6 +1,3 @@
-Here's a proper `README.md` file for your GitHub repository:
-
-```markdown
 # Movie Recommender System API Containerization
 
 This repository contains code to containerize a Movie Recommender System API using Docker and push it to GitHub Container Registry (GHCR).
@@ -63,6 +60,9 @@ docker run -d -p 5001:5000 movie-recommender-app
 
 Access the API at: [http://localhost:5001/recommend?title=The%20Matrix](http://localhost:5001/recommend?title=The%20Matrix)
 
+<img width="581" alt="Screenshot 2024-07-01 at 7 46 06 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/d29f0a21-ec31-49de-b97b-3e66efd78e8a">
+
+
 ## GitHub Container Registry (GHCR)
 
 ### Push Docker Image to GHCR
@@ -86,5 +86,5 @@ docker run -d -p 5002:5000 ghcr.io/manojbusam/recommender-container/recommender-
 
 Access the API at: [http://localhost:5002/recommend?title=The%20Matrix](http://localhost:5002/recommend?title=The%20Matrix)
 ```
+<img width="772" alt="Screenshot 2024-07-01 at 7 45 59 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/ea7b9854-4895-4ae6-884a-79669d7b7351">
 
-This `README.md` provides clear instructions for setting up the environment, building the Docker image, pushing it to GitHub Container Registry, and testing it locally. Adjust the URLs and paths as necessary based on your specific setup.
