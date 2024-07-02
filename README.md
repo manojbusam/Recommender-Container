@@ -1,4 +1,4 @@
-# Movie Recommender System API Containerization
+# API Containerization: Movie Recommender System
 
 This repository contains code to containerize a Movie Recommender System API using Docker and push it to GitHub Container Registry (GHCR).
 
