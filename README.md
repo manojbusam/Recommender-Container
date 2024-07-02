@@ -20,7 +20,7 @@ This repository is designed to facilitate running the Movie Recommender System A
 
 ## 1. GitHub Container Registry (GHCR)
 
-### Push Docker Image to GHCR
+### 1a. Push Docker Image to GHCR
 
 Clone Repo, Build and Tag the Docker image and Push it to GHCR:
 
@@ -33,7 +33,7 @@ docker login ghcr.io -u <username> -p <youraccesstoken>
 docker push ghcr.io/manojbusam/recommender-container/recommender-system:latest
 ```
 
-### Pull and Test from GHCR
+### 1b. Pull and Test from GHCR
 
 Pull the Docker image from GHCR and run it locally:
 
