@@ -5,9 +5,10 @@ This repository contains code to containerize a Movie Recommender System API usi
 ## Repository Design
 
 This repository is designed to facilitate running the Movie Recommender System API in various environments:
-1. **Python Virtual Environment:** Run the system directly in a Python virtual environment for development and testing.
-2. **Docker Container (Local):** Containerize the application for local deployment using Docker.
-3. **GitHub Container Registry (GHCR):** Push the Docker image to GHCR for centralized deployment and pull it back to run locally.
+1. **GitHub Container Registry (GHCR):** Push the Docker image to GHCR for centralized deployment and pull it back to run locally.
+2. **Python Virtual Environment:** Run the system directly in a Python virtual environment for development and testing.
+3. **Docker Container (Local):** Containerize the application for local deployment using Docker.
+
 
 ## Getting Started
 
@@ -17,7 +18,33 @@ This repository is designed to facilitate running the Movie Recommender System A
 - Docker installed
 - GitHub account and access to GHCR
 
-### 1. Python Virtual Environment
+## 1. GitHub Container Registry (GHCR)
+
+### Push Docker Image to GHCR
+
+Tag the Docker image and push it to GHCR:
+
+```bash
+docker build -t movie-recommender-app .
+docker tag movie-recommender-app:latest ghcr.io/manojbusam/recommender-container/recommender-system:latest
+docker login ghcr.io -u <username> -p <youraccesstoken>
+docker push ghcr.io/manojbusam/recommender-container/recommender-system:latest
+```
+
+### Pull and Test from GHCR
+
+Pull the Docker image from GHCR and run it locally:
+
+```bash
+docker pull ghcr.io/manojbusam/recommender-container/recommender-system:latest
+docker run -d -p 5002:5000 ghcr.io/manojbusam/recommender-container/recommender-system:latest
+```
+
+Access the API at: [http://localhost:5002/recommend?title=The%20Matrix](http://localhost:5002/recommend?title=The%20Matrix)
+
+<img width="772" alt="Screenshot 2024-07-01 at 7 45 59 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/ea7b9854-4895-4ae6-884a-79669d7b7351">
+
+### 2. Python Virtual Environment  (Local)
 
 1. **Clone the repository:**
 
@@ -47,7 +74,7 @@ This repository is designed to facilitate running the Movie Recommender System A
    python3 src/recommender.py
    ```
 
-## 2. Docker Container (Local)
+## 3. Docker Container (Local)
 
 ### Build Docker Image
 
@@ -70,28 +97,5 @@ Access the API at: [http://localhost:5001/recommend?title=The%20Matrix](http://l
 <img width="581" alt="Screenshot 2024-07-01 at 7 46 06 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/d29f0a21-ec31-49de-b97b-3e66efd78e8a">
 
 
-## 3. GitHub Container Registry (GHCR)
 
-### Push Docker Image to GHCR
-
-Tag the Docker image and push it to GHCR:
-
-```bash
-docker tag movie-recommender-app:latest ghcr.io/manojbusam/recommender-container/recommender-system:latest
-docker login ghcr.io -u manojbusam -p <youraccesstoken>
-docker push ghcr.io/manojbusam/recommender-container/recommender-system:latest
-```
-
-### Pull and Test from GHCR
-
-Pull the Docker image from GHCR and run it locally:
-
-```bash
-docker pull ghcr.io/manojbusam/recommender-container/recommender-system:latest
-docker run -d -p 5002:5000 ghcr.io/manojbusam/recommender-container/recommender-system:latest
-```
-
-Access the API at: [http://localhost:5002/recommend?title=The%20Matrix](http://localhost:5002/recommend?title=The%20Matrix)
-
-<img width="772" alt="Screenshot 2024-07-01 at 7 45 59 PM" src="https://github.com/manojbusam/Recommender-Container/assets/44409170/ea7b9854-4895-4ae6-884a-79669d7b7351">
 
